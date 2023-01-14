@@ -78,6 +78,9 @@ function App() {
           <input
             autoFocus
             value={searchString}
+            onKeyDown={(e) =>
+              e.key === "Escape" ? setSearchString("") : undefined
+            }
             onChange={(e) => setSearchString(e.target.value)}
             placeholder="search..."
           />

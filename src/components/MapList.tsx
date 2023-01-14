@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styled, { css } from "styled-components";
 import RealmComponent from "./MapComponent";
 import { DBDMap } from "../types/map";
@@ -61,6 +61,18 @@ type MapListProps = {
 const MapList: React.FC<MapListProps> = ({ mapsByRealm }) => {
   const [shownMap, setShownMap] = useState<DBDMap>();
   const realms = Array.from(mapsByRealm.keys());
+  const closeOnEscape = (e: KeyboardEvent) => {
+    if (e.key === "Escape" && shownMap) {
+      setShownMap(undefined);
+    }
+  };
+  useEffect(() => {
+    window.addEventListener("keydown", closeOnEscape);
+    // Remove event listeners on cleanup
+    return () => {
+      window.removeEventListener("keydown", closeOnEscape);
+    };
+  }, []); // Empty array ensures that effect is only run on mount and unmount
   return (
     <MapListWrapper>
       {realms.map((realm) => (
@@ -73,7 +85,7 @@ const MapList: React.FC<MapListProps> = ({ mapsByRealm }) => {
       ))}
       {shownMap && (
         <PortalWrapper>
-          <ShownMapModal>
+          <ShownMapModal tabIndex={0} onKeyDown={() => setShownMap(undefined)}>
             <div
               className={"opacity-layer"}
               onClick={() => setShownMap(undefined)}
