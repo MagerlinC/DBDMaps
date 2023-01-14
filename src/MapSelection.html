@@ -1,0 +1,744 @@
+<html>
+	<head>
+		<title>DBD Maps Clock - Dead By Daylight</title>
+		<style>
+		     body {
+			    padding-top: 3px;
+			    padding-left: 25px;
+				padding-right: 25px;
+				padding-bottom: 3px;
+				font-family: Tahoma, sans-serif;
+			 }
+			 div#body-content{ 
+				max-width: 960px;
+				margin: auto;
+			 }
+			 
+			 input[type="button"] {
+				margin-top: 3px;
+				margin-bottom: 3px;
+			 }
+			 
+			 .footer {
+				font-style: italic;
+				font-size: 12px;
+			 }
+		
+			body.alignleft {
+			  text-align: left;
+			  margin: auto;
+			}
+			body.aligncenter {
+			  text-align: center;
+			  margin: auto;
+			}
+			body.alignright {
+			  text-align: right;
+			  margin: auto;
+			}
+			
+			div#body-content.alignleft {
+			  float: left;
+			  clear: left;
+			  margin-top: -1.3em;
+			}
+			div#body-content.aligncenter {
+			  float: none;
+			}
+			div#body-content.alignright {
+			  float: right;
+			  clear: right;
+			  margin-top: -1.3em;
+			}
+						
+			ol.two-columns {
+				-moz-column-count: 2;
+				-moz-column-gap: 20px;
+				-webkit-column-count: 2;
+				-webkit-column-gap: 20px;
+				column-count: 2;
+				column-gap: 20px;
+				
+			}
+			ol.three-columns {
+				-moz-column-count: 3;
+				-moz-column-gap: 12px;
+				-webkit-column-count: 3;
+				-webkit-column-gap: 12px;
+				column-count: 3;
+				column-gap: 12px;
+			}
+			li {
+			  text-align: left;
+			  font-size: 14px;
+			  padding-top: 2px;
+			  padding-bottom: 2px;
+			  margin-left: auto;
+			  margin-top: 2px;
+			  margin-right: auto;
+			  margin-bottom: 2px;
+			}
+			span.clickable{
+			  text-decoration: underline;
+			  cursor: pointer;
+			}
+						
+		
+			.txtMap {
+			   width: 300px;
+			}
+			
+			.map-row-1
+			{
+			 display: block;
+			}
+			.map-row-2
+			{
+			 display: block;
+			}
+			.map-row-3
+			{
+			 display: block;
+			}
+			.map-col-1
+			{
+			 display: inline-block;
+			}
+			.map-col-2
+			{
+			display: inline-block;
+			}
+			.map-col-3
+			{
+			display: inline-block;
+			}
+			
+		
+		
+			.map-generic {
+			    display: inline-block;
+				border : 2px solid black;
+				margin:auto;
+				overflow: auto;
+				padding: 3px;
+			}
+			.map-generic img {
+				display: block;
+				height: 100%;
+				max-width: 100%;
+				margin: auto;
+			}
+			.map-one {
+				max-width: 720px;
+				height : 720px;
+			}
+			.map-two {
+				max-width: 480px;
+				height: 480px;
+			}
+			.map-four {
+				max-width: 360px;
+				height: 360px;
+			}
+			.map-nine {
+				max-width: 240px;
+				height : 240px;
+			}
+		
+			.darkmode {
+				background-color: black;
+				color: white;
+			}
+			
+		</style>
+	
+		<script type="application/javascript">
+	
+	globals = {};
+	globals.maps = [
+ {"realm": "Autohaven Wreckers"  , "names": ["Azarov's Resting Place"]                            , "image": "Azarovs/Azarovs Resting Place.png"}
+,{"realm": "Autohaven Wreckers"  , "names": ["Blood Lodge"]                                       , "image": "Azarovs/Blood Lodge.png"}
+,{"realm": "Autohaven Wreckers"  , "names": ["Gas Heaven"]                                        , "image": "Azarovs/Gas Heaven.png"}
+,{"realm": "Autohaven Wreckers"  , "names": ["Wreckers' Yard", "Wreckers Yard"]                   , "image": "Azarovs/Wreckers.png"}
+,{"realm": "Autohaven Wreckers"  , "names": ["Wretched Shop"]                                     , "image": "Azarovs/Wretched Shop.png"}
+,{"realm": "Badham"              , "names": ["Preschool I",    "Preschool 1"]                     , "image": "Badham/Preschool1.png"}
+,{"realm": "Badham"              , "names": ["Preschool II",   "Preschool 2"]                     , "image": "Badham/Preschool2.png"}
+,{"realm": "Badham"              , "names": ["Preschool III",  "Preschool 3"]                     , "image": "Badham/Preschool3.png"}
+,{"realm": "Badham"              , "names": ["Preschool IIIV", "Preschool 4"]                     , "image": "Badham/Preschool4.png"}
+,{"realm": "Badham"              , "names": ["Preschool V",    "Preschool 5"]                     , "image": "Badham/Preschool5.png"}
+,{"realm": "Coldwind Farm"       , "names": ["Fractured Cowshed"]                                 , "image": "Coldwind/Fractured Cowshed.png"}
+,{"realm": "Coldwind Farm"       , "names": ["Rancid Abbatoir"]                                   , "image": "Coldwind/Rancid Abbatoir.png"}
+,{"realm": "Coldwind Farm"       , "names": ["Rotten Fields"]                                     , "image": "Coldwind/Rotten Fields.png"}
+,{"realm": "Coldwind Farm"       , "names": ["The Thompson House"]                                , "image": "Coldwind/The Thompson House.png"}
+,{"realm": "Coldwind Farm"       , "names": ["Torment Creek"]                                     , "image": "Coldwind/Torment Creek.png"}
+,{"realm": "Crotus Prenn Asylum" , "names": ["Disturbed Ward"]                                    , "image": "Crotus Pen/Disturbed Ward.png"}
+,{"realm": "Crotus Prenn Asylum" , "names": ["Father Campbells Chapel"]                           , "image": "Crotus Pen/Father Campbells Chapel.png"}
+,{"realm": "MacMillan Estate"    , "names": ["Coal Tower"]                                        , "image": "McMillan/Coal Tower.png"}
+,{"realm": "MacMillan Estate"    , "names": ["Groaning Storehouse"]                               , "image": "McMillan/Groaning Storehouse.png"}
+,{"realm": "MacMillan Estate"    , "names": ["Ironworks Of Misery"]                               , "image": "McMillan/Ironworks Of Misery.png"}
+,{"realm": "MacMillan Estate"    , "names": ["Shelter Woods"]                                     , "image": "McMillan/Shelter Woods.png"}
+,{"realm": "MacMillan Estate"    , "names": ["Suffocation Pit"]                                   , "image": "McMillan/Suffocation Pit.png"}
+,{"realm": "Red Forest"          , "names": ["Mother's Dwelling", "Mothers Dwelling"]             , "image": "Red Forest/Mothers Dwelling.png"}
+,{"realm": "Red Forest"          , "names": ["Temple Of Purgation"]                               , "image": "Red Forest/Temple Of Purgation.png"}
+,{"realm": "Backwater Swamp"     , "names": ["Grim Pantry"]                                       , "image": "Swamp/Grim Pantry.png"}
+,{"realm": "Backwater Swamp"     , "names": ["The Pale Rose"]                                     , "image": "Swamp/Pale Rose.png"}
+,{"realm": "Yamaoka Estate"      , "names": ["Family Residence"]                                  , "image": "Yamaoka/Family Residence.png"}
+,{"realm": "Yamaoka Estate"      , "names": ["Sanctum Of Wrath"]                                  , "image": "Yamaoka/Sanctum Of Wrath.png"}
+,{"realm": "Raccoon City"        , "names": ["Police Station East Wing"]                          , "image": ""}
+,{"realm": "Raccoon City"        , "names": ["Police Station West Wing"]                          , "image": ""}
+,{"realm": "Forsaken Boneyard"   , "names": ["Eyrie of Crows"]                                    , "image": "Other/Eyrie of Crows.png"}
+,{"realm": "Grave of Glennvale"  , "names": ["Dead Dawg Saloon"]                                  , "image": "Other/Dead Dawg Saloon.png"}
+,{"realm": "Withered Isle"       , "names": ["Garden of Joy"]                                     , "image": "Other/Garden of Joy.png"}
+,{"realm": "Gidean Meat Plant"   , "names": ["The Game"]                                          , "image": "Other/The Game.png"}
+,{"realm": "Haddonfield"         , "names": ["Lampkin Lane"]                                      , "image": "Other/Haddonfield.png"}
+,{"realm": "Silent Hill"         , "names": ["Midwich Elementary School"]                         , "image": "Other/midwich-map.gif"}
+,{"realm": "Ormond"              , "names": ["Mount Ormond Resort"]                               , "image": "Other/Ormond.png"}
+,{"realm": "Shattered Square"              , "names": ["Shattered Square"]                               , "image": "Other/Shattered Square.png"}
+,{"realm": "Léry's Memorial Institute", "names": ["Treatment Theatre", "Lerys Memorial Institute: Treatment Theatre"], "image": "Other/Lerys.png"}];
+	
+	function main() {
+		populateAllLists();
+		const urlParams = new URLSearchParams(window.location.search);
+		const modeParam = urlParams.get('mode');
+		const mapParam = urlParams.get('map');
+		if (modeParam !== undefined && modeParam !== null && modeParam === 'light')
+		{
+			darkmode();
+		}
+		if (mapParam !== undefined && mapParam !== null && mapParam.length > 0)
+		{
+		   searchMaps(mapParam, '');
+		}
+		else
+		{
+			searchMaps('', '');
+		}
+		
+		var text =  'Hello JavaScript!';
+	}
+	
+
+	function kmpSearch(pattern, text) {
+	  if (pattern.length == 0)
+		return 0; // Immediate match
+
+	  // Compute longest suffix-prefix table
+	  var lsp = [0]; // Base case
+	  for (var i = 1; i < pattern.length; i++) {
+		var j = lsp[i - 1]; // Start by assuming we're extending the previous LSP
+		while (j > 0 && pattern[i] !== pattern[j])
+		  j = lsp[j - 1];
+		if (pattern[i] === pattern[j])
+		  j++;
+		lsp.push(j);
+	  }
+
+	  // Walk through text string
+	  var j = 0; // Number of chars matched in pattern
+	  for (var i = 0; i < text.length; i++) {
+		while (j > 0 && text[i] != pattern[j])
+		  j = lsp[j - 1]; // Fall back in the pattern
+		if (text[i]  == pattern[j]) {
+		  j++; // Next char matched, increment position
+		  if (j == pattern.length)
+			return i - (j - 1);
+		}
+	  }
+	  return -1; // Not found
+	}
+
+	function findMapsByName(val){
+		var myList = new Array();
+		
+		for (var i = 0; i < globals.maps.length; i++ ){
+			var oneMap = globals.maps[i];
+	
+			for (var j = 0; j < oneMap.names.length; j++) {
+				var mapName = oneMap.names[j];
+				var search = oneMap.realm + ": "+ mapName;
+				
+				var kmp = kmpSearch(val.toLowerCase(), search.toLowerCase());
+				if (kmp >= 0)
+				{
+					myList.push(oneMap);
+					break; //next map;
+				}
+			}
+		}
+		return myList;
+	}
+		
+	function findMapsByRealm(val){
+		var myList = new Array();
+		
+		for (var i = 0; i < globals.maps.length; i++ )
+		{
+			var oneMap = globals.maps[i];
+			var search = oneMap.realm;
+			
+			var kmp = kmpSearch(val.toLowerCase(), search.toLowerCase());
+			if (kmp >= 0)
+			{
+				myList.push(oneMap);
+			}
+		}
+		
+		return myList;
+	}
+	
+	function findMapByImagePath(val){
+		var myList = new Array();
+		
+		for (var i = 0; i < globals.maps.length; i++ ){
+			var oneMap = globals.maps[i];
+			var search = oneMap.image;
+		
+			var kmp = kmpSearch(val.toLowerCase(), search.toLowerCase());
+			if (kmp >= 0)
+			{
+				myList.push(oneMap);
+			}
+		
+		}
+		return myList;
+	}
+	
+	
+	function findMapByImagePathExact(val){
+		var myList = new Array();
+		
+		for (var i = 0; i < globals.maps.length; i++ ){
+			var oneMap = globals.maps[i];
+			
+			if (val == oneMap.image)
+			{
+				myList.push(oneMap);
+				break; //next map;
+			}
+		}
+		return myList;
+	}
+	
+	
+	function createMapElement(oneMap, className)
+	{
+		 var imgSrc = oneMap.image.replace(/ /g, '%20');
+		 const newDiv = document.createElement("div");
+		 newDiv.classList.add("map-generic");
+		 newDiv.classList.add(className);
+		 newDiv.innerHTML = "<div><img src=./"+imgSrc+" onclick=\"searchMaps('"+oneMap.image+"', 'imagePathExact');\" title='"+oneMap.names[0]+"'></img></div>";
+		 return newDiv;
+	}
+	
+	function renderMaps(listMaps, map)
+	{
+		var divMaps = document.getElementById("divSearchMaps");
+		var divAllMaps = document.getElementById("divAllMaps");
+		divMaps.style.display = "block";
+		divAllMaps.style.display = "none";
+		
+		if (listMaps.length == 1)
+		{
+			const newDiv = document.createElement("div");
+			var elem1 = createMapElement(listMaps[0], "map-one");
+			newDiv.innerHTML = "<div><div class=\"map-row-1\"><div class=\"map-col-1\">"+elem1.outerHTML+"</div></div></div>";
+			divMaps.innerHTML = newDiv.outerHTML;
+		}
+		else if (listMaps.length == 2)
+		{
+			const newDiv = document.createElement("div");
+			var elem1 = createMapElement(listMaps[0], "map-two");
+			var elem2 = createMapElement(listMaps[1], "map-two");
+			newDiv.innerHTML = "<div class=\"map-row-1\"><div class=\"map-col-2\">"+elem1.outerHTML+"</div><div class=\"map-col-2\">"+elem2.outerHTML+"</div></div></div>";
+			divMaps.innerHTML = newDiv.outerHTML;
+		}
+		else if (listMaps.length > 2 && listMaps.length < 5)
+		{
+			const newDiv = document.createElement("div");
+			var className = "map-four";
+			var elem1 = listMaps.length > 0 ? createMapElement(listMaps[0], className).outerHTML : "<div></div>";
+			var elem2 = listMaps.length > 1 ? createMapElement(listMaps[1], className).outerHTML : "<div></div>";
+			var elem3 = listMaps.length > 2 ? createMapElement(listMaps[2], className).outerHTML : "<div></div>";
+			var elem4 = listMaps.length > 3 ? createMapElement(listMaps[3], className).outerHTML : "<div></div>";
+			
+			newDiv.innerHTML = 
+			"<div><div class=\"map-row-2\"><div class=\"map-col-2\">"+elem1+"</div><div class=\"map-col-2\">"+elem2+"</div></div>"+
+			"<div class=\"map-row-2\"><div class=\"map-col-2\">"+elem3+"</div><div class=\"map-col-2\">"+elem4+"</div></div></div>";
+			
+			divMaps.innerHTML = newDiv.outerHTML;
+		}
+		else if (listMaps.length > 4 && listMaps.length < 10)
+		{
+			const newDiv = document.createElement("div");
+			var className = "map-nine";
+			var elem1 = listMaps.length > 0 ? createMapElement(listMaps[0], className).outerHTML : "<div></div>";
+			var elem2 = listMaps.length > 1 ? createMapElement(listMaps[1], className).outerHTML : "<div></div>";
+			var elem3 = listMaps.length > 2 ? createMapElement(listMaps[2], className).outerHTML : "<div></div>";
+			var elem4 = listMaps.length > 3 ? createMapElement(listMaps[3], className).outerHTML : "<div></div>";
+			var elem5 = listMaps.length > 4 ? createMapElement(listMaps[4], className).outerHTML : "<div></div>";
+			var elem6 = listMaps.length > 5 ? createMapElement(listMaps[5], className).outerHTML : "<div></div>";
+			var elem7 = listMaps.length > 6 ? createMapElement(listMaps[6], className).outerHTML : "<div></div>";
+			var elem8 = listMaps.length > 7 ? createMapElement(listMaps[7], className).outerHTML : "<div></div>";
+			var elem9 = listMaps.length > 8 ? createMapElement(listMaps[8], className).outerHTML : "<div></div>";
+			
+			newDiv.innerHTML = 
+			"<div><div class=\"map-row-3\"><div class=\"map-col-3\">"+elem1+"</div><div class=\"map-col-3\">"+elem2+"</div><div class=\"map-col-3\">"+elem3+"</div></div>"+
+			"<div class=\"map-row-3\"><div class=\"map-col-3\">"+elem4+"</div><div class=\"map-col-3\">"+elem5+"</div><div class=\"map-col-3\">"+elem6+"</div></div>"+
+			"<div class=\"map-row-3\"><div class=\"map-col-3\">"+elem7+"</div><div class=\"map-col-3\">"+elem8+"</div><div class=\"map-col-3\">"+elem9+"</div></div></div>";
+			
+			divMaps.innerHTML = newDiv.outerHTML;
+		}
+		else
+		{
+			var divAllSearchTxt = document.getElementById("divAllSearchTxt");
+			var searchTxt = "";
+			if (map.length > 0)
+			{
+				searchTxt = "<span>Searching on \""+ map +"\" had "+ listMaps.length +" results.</span>";
+			}
+			divAllSearchTxt.innerHTML = searchTxt;
+			divMaps.style.display = "none";
+			divAllMaps.style.display = "block";
+		}
+		
+	}
+	
+	function populateAllLists(){
+			var divAllMaps = document.getElementById("divAllMaps");
+			divAllMaps.style.display = "none";
+			var divAllGroupedRealmMapName = document.getElementById("divAllGroupedRealmMapName");
+			divAllGroupedRealmMapName.style.display = "block";
+			var divAllListedRealmMapName = document.getElementById("divAllListedRealmMapName");
+			divAllListedRealmMapName.style.display = "none";
+			var divAllListedMapName = document.getElementById("divAllListedMapName");
+			divAllListedMapName.style.display = "none";		
+			
+			// divAllGroupedRealmMapName
+			{
+			
+				var selection1 = sortGroupedByRealmThenSortMapName(globals.maps);
+				const newDiv1 = document.createElement("div");
+				var htmlBuilder1a = '';
+				var inc = 1;
+				for (var i = 0; i < selection1.length; i++ ){
+					var htmlBuilder1b = '';
+					var oneRealm = selection1[i];
+					for (var j = 0; j < oneRealm.maps.length; j++ ){
+						var oneMap = oneRealm.maps[j];
+						var onclick = '';
+						if (oneMap.image !== undefined && oneMap.image !== '' && oneMap.image.length > 0)
+						{
+							onclick = " class=\"clickable\" onclick=\"searchMaps('"+oneMap.image+"','imagePathExact')\" ";
+						}
+					
+						var oneMapHtml = "<li><span"+ onclick +">[" + inc + "] " + oneMap.names[0] +"</span></li>";
+
+						htmlBuilder1b = htmlBuilder1b + oneMapHtml;
+						inc = inc+1;
+					}
+					htmlBuilder1a = htmlBuilder1a + "<div><li><span>"+ oneRealm.realm + "</span><ol>"+htmlBuilder1b+"</ol></li></div>";
+					
+				}
+				
+				newDiv1.innerHTML = "<div><ol class='two-columns'>"+htmlBuilder1a+"</ol></div>";
+				divAllGroupedRealmMapName.innerHTML = newDiv1.outerHTML;
+			}
+						
+			// divAllListedRealmMapName
+			{
+				var selection2 = sortListByRealmThenMapName(globals.maps);
+				
+				const newDiv2 = document.createElement("div");
+				var htmlBuilder2 = '';
+				for (var i = 0; i < selection2.length; i ++ ){
+					var oneMap = selection2[i];
+					
+					var onclick = '';
+					if (oneMap.image !== undefined && oneMap.image !== '' && oneMap.image.length > 0)
+					{
+						onclick = " class=\"clickable\" onclick=\"searchMaps('"+oneMap.image+"','imagePathExact')\" ";
+					}
+				
+					var oneMapHtml = "<li><span"+ onclick +">"+ oneMap.realm + ": " + oneMap.names[0]+"</span></li>";
+					htmlBuilder2 = htmlBuilder2 + oneMapHtml;
+				}
+				
+				newDiv2.innerHTML = "<div><ol class='two-columns'>"+htmlBuilder2+"</ol></div>";
+				divAllListedRealmMapName.innerHTML = newDiv2.outerHTML;
+			}
+			
+			//divAllListedMapName
+			{
+				var selection3 = sortByMapNameThenRealm(globals.maps);
+				
+				const newDiv3 = document.createElement("div");
+				var htmlBuilder3 = '';
+				for (var i = 0; i < selection2.length; i ++ ){
+					var oneMap = selection2[i];
+					
+					var cssClass = '';
+					var onclick = '';
+					if (oneMap.image !== undefined && oneMap.image !== '' && oneMap.image.length > 0)
+					{
+						
+						onclick = " class=\"clickable\" onclick=\"searchMaps('"+oneMap.image+"','imagePathExact')\" ";
+					}
+					
+					var oneMapHtml = "<li><span"+ onclick +">"+ oneMap.names[0] + " (" + oneMap.realm+")</span></li>";
+					htmlBuilder3 = htmlBuilder3 + oneMapHtml;
+				}
+				
+				newDiv3.innerHTML = "<div><ol class='two-columns'>"+htmlBuilder3+"</ol></div>";
+				divAllListedMapName.innerHTML = newDiv3.outerHTML;
+			}
+			
+	}
+	
+	function sortByMapNameThenRealm(mapList)
+	{
+		var selection = mapList;
+		selection.sort(function (a,b) {
+			let fa = (a.names[0] + "("+a.realm+")").toLowerCase(),
+			fb = (b.names[0] + "("+b.realm+")").toLowerCase();
+
+			if (fa < fb) {
+				return -1;
+			}
+			if (fa > fb) {
+				return 1;
+			}
+			return 0;
+		});
+		return selection;
+	}
+	
+	function sortListByRealmThenMapName(mapList){
+		var selection = mapList;
+		selection.sort(function (a,b) {
+			let fa = (a.realm + ": "+ a.names[0]).toLowerCase(),
+			fb = (b.realm + ": "+ b.names[0]).toLowerCase();
+
+			if (fa < fb) {
+				return -1;
+			}
+			if (fa > fb) {
+				return 1;
+			}
+			return 0;
+		});
+		return selection;
+	}
+	
+	function sortByRealmOnly(mapList){
+		var selection = mapList;
+		selection.sort(function (a,b) {
+			let fa = (a.realm).toLowerCase(),
+			fb = (b.realm).toLowerCase();
+
+			if (fa < fb) {
+				return -1;
+			}
+			if (fa > fb) {
+				return 1;
+			}
+			return 0;
+		});
+		return selection;
+	}
+	
+	
+	function sortGroupedByRealmThenSortMapName(mapList)
+	{
+		var selection = mapList;
+		var sorted = sortListByRealmThenMapName(selection);
+		
+		var myRealms = new Array();
+		
+		for (var i = 0; i < sorted.length; i++ ){
+			var isDone = false;
+			var oneMap =  sorted[i];
+			if (myRealms.length === 0)
+			{
+				//first item in myRealms;
+				myRealms.push( {realm: oneMap.realm, maps: [oneMap]} );
+				isDone = true;
+				continue;
+			}
+			
+			for (var j = 0; j < myRealms.length; j++ ){
+				if (myRealms[j].realm == oneMap.realm)
+				{
+					//realm alrady in myRealms;
+					myRealms[j].maps.push(oneMap);
+					isDone = true;
+					break;
+				}
+			}
+			if (isDone)
+			{
+				continue;
+			}
+			//realm was not yet in myRealms;
+			myRealms.push( {realm: oneMap.realm, maps: [oneMap]} );
+		}
+		
+		//var sortedRealms = sortByRealmOnly(myRealms);
+		
+		return myRealms;
+	}
+	
+	
+	
+	function txtMapOnChange(e){
+		var map = document.getElementById("txtMap").value;
+		//var divSearch = document.getElementById("divSearch");
+		//var divMapList = document.getElementById("divMapList");
+		
+		searchMaps(map, '');
+	}
+	
+	function searchMaps(searchString, type)
+	{
+		if (searchString === undefined)
+		{
+			searchString = '';
+		}
+		if (type === undefined)
+		{
+			type = '';
+		}
+	
+		document.getElementById("txtMap").value = searchString
+		document.getElementById("txtSearchType").value = type
+		
+		var listMaps = globals.maps;
+		if (searchString === undefined)
+		{
+			searchString = '';
+		}
+		if (searchString.length > 0)
+		{		
+			if (type == 'realm'){
+			    listMaps = findMapsByRealm(searchString);
+			}
+			else if (type == 'imagePathExact'){
+			    listMaps = findMapByImagePathExact(searchString);
+			}
+			else if (type == 'imagePath'){
+			    listMaps = findMapByImagePath(searchString);
+			}
+			else
+			{
+				listMaps = findMapsByName(searchString);
+			}
+			//divSearch.innerHTML = map;
+			//divMapList.innerHTML = listMaps;
+		}
+		renderMaps(listMaps, searchString);
+		
+	}
+		
+	function darkmode() {
+	  var element = document.getElementById("body");
+	  element.classList.toggle("darkmode");
+	}
+	
+	function alignBody(alignment) {
+	  var element = document.getElementById("body");
+	  var element2 = document.getElementById("body-content");
+	  element.classList.remove("alignleft");
+	  element.classList.remove("aligncenter");
+	  element.classList.remove("alignright");
+	  element2.classList.remove("alignleft");
+	  element2.classList.remove("aligncenter");
+	  element2.classList.remove("alignright");
+	  
+	  if (alignment === 'left'){
+		element.classList.add("alignleft");
+		element2.classList.add("alignleft");
+	  }
+	  else if (alignment === 'right'){
+		element.classList.add("alignright");
+		element2.classList.add("alignright");
+	  }
+	  else {
+		element.classList.add("aligncenter");
+		element2.classList.add("aligncenter");
+	  }	  
+	}
+	
+	function sortMaps(sorting) {
+	  //var element = document.getElementById("body");
+	  var divAllGroupedRealmMapName = document.getElementById("divAllGroupedRealmMapName");
+	  divAllGroupedRealmMapName.style.display = "none";
+	  var divAllListedRealmMapName = document.getElementById("divAllListedRealmMapName");
+	  divAllListedRealmMapName.style.display = "none";
+	  var divAllListedMapName = document.getElementById("divAllListedMapName");
+	  divAllListedMapName.style.display = "none";
+	  
+	  if (sorting === 'sortRealmThenMapName'){
+		divAllListedRealmMapName.style.display = "block";
+	  }
+	  else if (sorting === 'sortMapNameThenRealm'){
+		divAllListedMapName.style.display = "block";
+	  }
+	  else {
+		divAllGroupedRealmMapName.style.display = "block";
+	  }	  
+	}
+	
+	
+</script>
+	</head>
+	<body id="body" class="darkmode aligncenter">
+		<div id="body-content">
+			<div class="header">
+			<h1>DBD Map Search - Clocks</h1>
+				<div>
+					<input type="button" onclick="darkmode()" value="Dark mode"></input>
+					<input type="button" onclick="alignBody('left')" value="Align Left"></input>
+					<input type="button" onclick="alignBody('center')" value="Align Center"></input>
+					<input type="button" onclick="alignBody('right')" value="Align Right"></input>
+				</div>
+				<div>
+					<input type="button" onclick="searchMaps('Autohaven', 'realm')" value="Autohaven"></input>
+					<input type="button" onclick="searchMaps('Badham', 'realm')" value="Badham"></input>
+					<input type="button" onclick="searchMaps('Coldwind Farm', 'realm')" value="Coldwind"></input>
+					<input type="button" onclick="searchMaps('Crotus Prenn Asylum', 'realm')" value="Crotus Prenn"></input>
+					<input type="button" onclick="searchMaps('MacMillan Estate', 'realm')" value="MacMillan"></input>
+					<input type="button" onclick="searchMaps('Red Forest', 'realm')" value="Red Forest"></input>
+					<input type="button" onclick="searchMaps('Backwater Swamp', 'realm')" value="Backwater Swamp"></input>
+					<input type="button" onclick="searchMaps('Yamaoka Estate', 'realm')" value="Yamaoka"></input>
+					<input type="button" onclick="searchMaps('Other/', 'imagePath')" value="Other"></input>
+					<input type="button" onclick="searchMaps('', '')" value="All"></input>
+				</div>
+			</div>
+			
+			<div class="content">
+				<div><input class="txtMap" id="txtMap" type="text" onkeyup="txtMapOnChange()" style="display:none;" /></div>
+				<div><input class="txtSearchType" id="txtSearchType" type="text" style="display:none;" /></div>
+				<!--<div id="divSearch" >.. search ...</div>
+				<div id="divMapList" >... maplist ...</div>-->
+				<div id="divSearchMaps" >... images ...</div>
+				<div id="divAllMaps" >
+					<div>
+						<input type="button" onclick="sortMaps('groupedRealm')" value="Grouped View"></input>
+						<input type="button" onclick="sortMaps('sortRealmThenMapName')" value="Sorted by Realm"></input>
+						<input type="button" onclick="sortMaps('sortMapNameThenRealm')" value="Sorted by Map Name"></input>
+					</div>
+					<div id="divAllSearchTxt"></div>
+					<div id="divAllGroupedRealmMapName"></div>
+					<div id="divAllListedRealmMapName"></div>
+					<div id="divAllListedMapName"></div>
+				</div>
+			</div>
+			
+			<div class="footer">
+				<div>Images from Feijngy (MapCallputsFeijngy). Found via Hens333 (<a href="https://www.twitch.tv/hens333">Twitch</a>). Webpage build by Broosley and Evo (last update: 2022-10-12).
+			</div>
+		</div>
+	</body>
+	<script type="application/javascript">
+		main();
+	</script>
+</html>

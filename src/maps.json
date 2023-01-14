@@ -1,0 +1,202 @@
+{
+  "maps": [
+    {
+      "realm": "Autohaven Wreckers",
+      "names": ["Azarov's Resting Place"],
+      "image": "Azarovs/Azarovs Resting Place.png"
+    },
+    {
+      "realm": "Autohaven Wreckers",
+      "names": ["Blood Lodge"],
+      "image": "Azarovs/Blood Lodge.png"
+    },
+    {
+      "realm": "Autohaven Wreckers",
+      "names": ["Gas Heaven"],
+      "image": "Azarovs/Gas Heaven.png"
+    },
+    {
+      "realm": "Autohaven Wreckers",
+      "names": ["Wreckers' Yard", "Wreckers Yard"],
+      "image": "Azarovs/Wreckers.png"
+    },
+    {
+      "realm": "Autohaven Wreckers",
+      "names": ["Wretched Shop"],
+      "image": "Azarovs/Wretched Shop.png"
+    },
+    {
+      "realm": "Badham",
+      "names": ["Preschool I", "Preschool 1"],
+      "image": "Badham/Preschool1.png"
+    },
+    {
+      "realm": "Badham",
+      "names": ["Preschool II", "Preschool 2"],
+      "image": "Badham/Preschool2.png"
+    },
+    {
+      "realm": "Badham",
+      "names": ["Preschool III", "Preschool 3"],
+      "image": "Badham/Preschool3.png"
+    },
+    {
+      "realm": "Badham",
+      "names": ["Preschool IIIV", "Preschool 4"],
+      "image": "Badham/Preschool4.png"
+    },
+    {
+      "realm": "Badham",
+      "names": ["Preschool V", "Preschool 5"],
+      "image": "Badham/Preschool5.png"
+    },
+    {
+      "realm": "Coldwind Farm",
+      "names": ["Fractured Cowshed"],
+      "image": "Coldwind/Fractured Cowshed.png"
+    },
+    {
+      "realm": "Coldwind Farm",
+      "names": ["Rancid Abbatoir"],
+      "image": "Coldwind/Rancid Abbatoir.png"
+    },
+    {
+      "realm": "Coldwind Farm",
+      "names": ["Rotten Fields"],
+      "image": "Coldwind/Rotten Fields.png"
+    },
+    {
+      "realm": "Coldwind Farm",
+      "names": ["The Thompson House"],
+      "image": "Coldwind/The Thompson House.png"
+    },
+    {
+      "realm": "Coldwind Farm",
+      "names": ["Torment Creek"],
+      "image": "Coldwind/Torment Creek.png"
+    },
+    {
+      "realm": "Crotus Prenn Asylum",
+      "names": ["Disturbed Ward"],
+      "image": "Crotus Pen/Disturbed Ward.png"
+    },
+    {
+      "realm": "Crotus Prenn Asylum",
+      "names": ["Father Campbells Chapel"],
+      "image": "Crotus Pen/Father Campbells Chapel.png"
+    },
+    {
+      "realm": "MacMillan Estate",
+      "names": ["Coal Tower"],
+      "image": "McMillan/Coal Tower.png"
+    },
+    {
+      "realm": "MacMillan Estate",
+      "names": ["Groaning Storehouse"],
+      "image": "McMillan/Groaning Storehouse.png"
+    },
+    {
+      "realm": "MacMillan Estate",
+      "names": ["Ironworks Of Misery"],
+      "image": "McMillan/Ironworks Of Misery.png"
+    },
+    {
+      "realm": "MacMillan Estate",
+      "names": ["Shelter Woods"],
+      "image": "McMillan/Shelter Woods.png"
+    },
+    {
+      "realm": "MacMillan Estate",
+      "names": ["Suffocation Pit"],
+      "image": "McMillan/Suffocation Pit.png"
+    },
+    {
+      "realm": "Red Forest",
+      "names": ["Mother's Dwelling", "Mothers Dwelling"],
+      "image": "Red Forest/Mothers Dwelling.png"
+    },
+    {
+      "realm": "Red Forest",
+      "names": ["Temple Of Purgation"],
+      "image": "Red Forest/Temple Of Purgation.png"
+    },
+    {
+      "realm": "Backwater Swamp",
+      "names": ["Grim Pantry"],
+      "image": "Swamp/Grim Pantry.png"
+    },
+    {
+      "realm": "Backwater Swamp",
+      "names": ["The Pale Rose"],
+      "image": "Swamp/Pale Rose.png"
+    },
+    {
+      "realm": "Yamaoka Estate",
+      "names": ["Family Residence"],
+      "image": "Yamaoka/Family Residence.png"
+    },
+    {
+      "realm": "Yamaoka Estate",
+      "names": ["Sanctum Of Wrath"],
+      "image": "Yamaoka/Sanctum Of Wrath.png"
+    },
+    {
+      "realm": "Raccoon City",
+      "names": ["Police Station East Wing"],
+      "image": ""
+    },
+    {
+      "realm": "Raccoon City",
+      "names": ["Police Station West Wing"],
+      "image": ""
+    },
+    {
+      "realm": "Forsaken Boneyard",
+      "names": ["Eyrie of Crows"],
+      "image": "Other/Eyrie of Crows.png"
+    },
+    {
+      "realm": "Grave of Glennvale",
+      "names": ["Dead Dawg Saloon"],
+      "image": "Other/Dead Dawg Saloon.png"
+    },
+    {
+      "realm": "Withered Isle",
+      "names": ["Garden of Joy"],
+      "image": "Other/Garden of Joy.png"
+    },
+    {
+      "realm": "Gidean Meat Plant",
+      "names": ["The Game"],
+      "image": "Other/The Game.png"
+    },
+    {
+      "realm": "Haddonfield",
+      "names": ["Lampkin Lane"],
+      "image": "Other/Haddonfield.png"
+    },
+    {
+      "realm": "Silent Hill",
+      "names": ["Midwich Elementary School"],
+      "image": "Other/midwich-map.gif"
+    },
+    {
+      "realm": "Ormond",
+      "names": ["Mount Ormond Resort"],
+      "image": "Other/Ormond.png"
+    },
+    {
+      "realm": "Shattered Square",
+      "names": ["Shattered Square"],
+      "image": "Other/Shattered Square.png"
+    },
+    {
+      "realm": "Léry's Memorial Institute",
+      "names": [
+        "Treatment Theatre",
+        "Lerys Memorial Institute: Treatment Theatre"
+      ],
+      "image": "Other/Lerys.png"
+    }
+  ]
+}
