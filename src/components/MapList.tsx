@@ -57,22 +57,16 @@ const ShownMapModal = styled.div`
 
 type MapListProps = {
   mapsByRealm: Map<string, DBDMap[]>;
+  setShownMap: (map: DBDMap | undefined) => void;
+  shownMap?: DBDMap;
 };
-const MapList: React.FC<MapListProps> = ({ mapsByRealm }) => {
-  const [shownMap, setShownMap] = useState<DBDMap>();
+const MapList: React.FC<MapListProps> = ({
+  mapsByRealm,
+  setShownMap,
+  shownMap,
+}) => {
   const realms = Array.from(mapsByRealm.keys());
-  const closeOnEscape = (e: KeyboardEvent) => {
-    if (e.key === "Escape" && shownMap) {
-      setShownMap(undefined);
-    }
-  };
-  useEffect(() => {
-    window.addEventListener("keydown", closeOnEscape);
-    // Remove event listeners on cleanup
-    return () => {
-      window.removeEventListener("keydown", closeOnEscape);
-    };
-  }, []); // Empty array ensures that effect is only run on mount and unmount
+
   return (
     <MapListWrapper>
       {realms.map((realm) => (

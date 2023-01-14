@@ -6,7 +6,7 @@ import "./animations.css";
 import { theme } from "./theme";
 import MapList from "./components/MapList";
 import TextComponent, { TextVariant } from "./components/Text";
-import { useState } from "react";
+import React, { useEffect, useState } from "react";
 import MapJSON from "./maps.json";
 import { DBDMap } from "./types/map";
 
@@ -44,8 +44,40 @@ const ApplicationWrapper = styled.div`
 
 function App() {
   const [searchString, setSearchString] = useState<string>("");
+  const [shownMap, setShownMap] = useState<DBDMap>();
   const maps = MapJSON.maps;
   const mapsByRealm = new Map<string, DBDMap[]>();
+
+  useEffect(() => {
+    window.addEventListener("keydown", closeOnEscape);
+    // Remove event listeners on cleanup
+    return () => {
+      window.removeEventListener("keydown", closeOnEscape);
+    };
+  }, []); // Empty array ensures that effect is only run on mount and unmount
+
+  const handleInputKeydown = (e: React.KeyboardEvent) => {
+    switch (e.key) {
+      case "Escape":
+        setSearchString("");
+        break;
+      case "Enter":
+        if (searchString) {
+          const firstRealm = Array.from(mapsByRealm.keys())[0];
+          const firstRealmMaps = mapsByRealm.get(firstRealm);
+          if (firstRealmMaps) {
+            setShownMap(firstRealmMaps[0]);
+          }
+        }
+        break;
+    }
+  };
+
+  const closeOnEscape = (e: KeyboardEvent) => {
+    if (e.key === "Escape") {
+      setShownMap(undefined);
+    }
+  };
 
   const isMatch = (map: DBDMap, searchString: string) => {
     const realmMatch = map.realm
@@ -78,14 +110,16 @@ function App() {
           <input
             autoFocus
             value={searchString}
-            onKeyDown={(e) =>
-              e.key === "Escape" ? setSearchString("") : undefined
-            }
+            onKeyDown={handleInputKeydown}
             onChange={(e) => setSearchString(e.target.value)}
             placeholder="search..."
           />
         </header>
-        <MapList mapsByRealm={mapsByRealm} />
+        <MapList
+          mapsByRealm={mapsByRealm}
+          setShownMap={setShownMap}
+          shownMap={shownMap}
+        />
       </ApplicationWrapper>
     </ThemeProvider>
   );
