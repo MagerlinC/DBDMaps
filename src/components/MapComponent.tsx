@@ -32,15 +32,17 @@ const RealmComponent: React.FC<MapProps> = ({ maps, realmName, showMap }) => {
   return (
     <RealmWrapper>
       <TextComponent variant={TextVariant.HEADER}>{realmName}</TextComponent>
-      {maps.map((map) => (
-        <div
-          className={"map-entry"}
-          key={map.names[0]}
-          onClick={() => showMap(map)}
-        >
-          {map.names[0]}
-        </div>
-      ))}
+      <ul>
+        {maps.map((map) => (
+          <li
+            className={"map-entry"}
+            key={map.names[0]}
+            onClick={() => showMap(map)}
+          >
+            {map.names[0]}
+          </li>
+        ))}
+      </ul>
     </RealmWrapper>
   );
 };

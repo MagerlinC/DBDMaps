@@ -14,7 +14,7 @@ const ApplicationWrapper = styled.div`
   ${({ theme }) => `
     display: flex;
     flex-direction: column;
-    gap: ${theme.spacing.large};
+    gap: ${theme.spacing.small};
     margin: 0;
     padding: 0;
     background-color: ${theme.colors.primary};
@@ -28,8 +28,14 @@ const ApplicationWrapper = styled.div`
       display: flex;
       flex-direction: column;
       text-align: center;
-      gap: ${theme.spacing.large};
-      padding: ${theme.spacing.large};
+      gap: ${theme.spacing.medium};
+      padding: ${theme.spacing.small} ${theme.spacing.large};
+      .reference {
+        opacity: 0.8;
+        position: absolute;
+        top: ${theme.spacing.small};
+        right: ${theme.spacing.large};
+      }
     }
     input {
       padding: 8px;
@@ -106,6 +112,9 @@ function App() {
         <header>
           <TextComponent variant={TextVariant.PAGEHEADER}>
             Dead by Daylight Callout Maps
+          </TextComponent>
+          <TextComponent className={"reference"} variant={TextVariant.BODY}>
+            Maps by <a href="https://www.youtube.com/@hens333">Hens33</a>
           </TextComponent>
           <input
             autoFocus

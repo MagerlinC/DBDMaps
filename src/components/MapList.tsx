@@ -7,7 +7,7 @@ import DynamicImage from "./DynamicImage";
 
 const MapListWrapper = styled.div`
   ${({ theme }) => css`
-    padding: ${theme.spacing.large};
+    padding: 8px ${theme.spacing.large};
     max-height: 100%;
     overflow-y: scroll;
     display: grid;
