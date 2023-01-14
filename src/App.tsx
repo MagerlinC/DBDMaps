@@ -45,6 +45,9 @@ const ApplicationWrapper = styled.div`
         border: none;
       }
     }
+    a:visited {
+      color: ${theme.colors.secondary};
+    }
   `}
 `;
 

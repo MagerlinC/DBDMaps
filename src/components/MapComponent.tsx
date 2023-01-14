@@ -11,7 +11,7 @@ const RealmWrapper = styled.div<MapStyleProps>`
     box-shadow: ${theme.boxshadows.medium};
     display: flex;
     flex-direction: column;
-    gap: 4px;
+    gap: ${theme.spacing.medium};
     img {
       width: 20vw;
     }

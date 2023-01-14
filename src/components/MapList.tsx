@@ -68,7 +68,7 @@ const MapList: React.FC<MapListProps> = ({
   setShownMap,
   shownMap,
 }) => {
-  const realms = Array.from(mapsByRealm.keys());
+  const realms = Array.from(mapsByRealm.keys()).sort();
 
   return (
     <MapListWrapper>
