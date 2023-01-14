@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdbd_maps=self.webpackChunkdbd_maps||[]).push([[193],{4193:function(s,e,p){s.exports=p.p+"static/media/Coal Tower.295485252281b5568660.png"}}]);
