@@ -28,13 +28,20 @@ const ShownMapModal = styled.div`
     flex-direction: column;
     align-items: center;
     .modal-contents {
+      position: relative;
+      top: 40%;
+      transform: translateY(-50%);
       z-index: 3;
       display: flex;
       flex-direction: column;
       align-items: center;
       padding: ${theme.spacing.medium};
-      width: 40vw;
-      height: 40vh;
+      img {
+        position: relative;
+        top: 60%;
+        transform: translateY(-50%);
+        width: max(40vh, 40vw);
+      }
       button {
         position: absolute;
         right: 25%;

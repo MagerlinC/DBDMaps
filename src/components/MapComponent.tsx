@@ -12,9 +12,6 @@ const RealmWrapper = styled.div<MapStyleProps>`
     display: flex;
     flex-direction: column;
     gap: ${theme.spacing.medium};
-    img {
-      width: 20vw;
-    }
     .map-entry {
       cursor: pointer;
       &:hover {
