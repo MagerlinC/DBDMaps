@@ -1,21 +1,27 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { DBDMap } from "../types/map";
 import TextComponent, { TextVariant } from "./Text";
 type MapStyleProps = {};
 const RealmWrapper = styled.div<MapStyleProps>`
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  img {
-    width: 20vw;
-  }
-  .map-entry {
-    cursor: pointer;
-    &:hover {
-      text-decoration: underline;
+  ${({ theme }) => css`
+    padding: 8px;
+    border: 1px solid ${theme.colors.tertiary};
+    border-radius: ${theme.borderRadius.medium};
+    box-shadow: ${theme.boxshadows.medium};
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    img {
+      width: 20vw;
     }
-  }
+    .map-entry {
+      cursor: pointer;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  `}
 `;
 type MapProps = {
   maps: DBDMap[];

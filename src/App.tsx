@@ -16,22 +16,22 @@ const ApplicationWrapper = styled.div`
     flex-direction: column;
     gap: ${theme.spacing.large};
     margin: 0;
-    padding: ${theme.spacing.large};
+    padding: 0;
     background-color: ${theme.colors.primary};
     min-height: 100vh;
     height: 100vh;
-    overflow-x: hidden;
+    max-height: 100vh;
+    overflow: hidden;
     color: ${theme.colors.textPrimary};
     font-family: ${theme.typography.fontFamilyMono};
     header {
       display: flex;
       flex-direction: column;
       text-align: center;
-      width: 100%;
       gap: ${theme.spacing.large};
+      padding: ${theme.spacing.large};
     }
     input {
-      margin: 8px;
       padding: 8px;
       border-radius: 8px;
       border: none;
