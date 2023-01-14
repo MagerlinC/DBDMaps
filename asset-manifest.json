@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/DBDMaps/static/css/main.97c054e4.css",
-    "main.js": "/DBDMaps/static/js/main.6c4415bd.js",
+    "main.js": "/DBDMaps/static/js/main.cd366010.js",
     "static/js/814.807218f3.chunk.js": "/DBDMaps/static/js/814.807218f3.chunk.js",
     "static/js/114.d88d4fb9.chunk.js": "/DBDMaps/static/js/114.d88d4fb9.chunk.js",
     "static/js/265.02fb20cf.chunk.js": "/DBDMaps/static/js/265.02fb20cf.chunk.js",
@@ -83,11 +83,11 @@
     "static/media/Midwitch Top.png": "/DBDMaps/static/media/Midwitch Top.7c877c10a165d8e0296c.png",
     "index.html": "/DBDMaps/index.html",
     "main.97c054e4.css.map": "/DBDMaps/static/css/main.97c054e4.css.map",
-    "main.6c4415bd.js.map": "/DBDMaps/static/js/main.6c4415bd.js.map",
+    "main.cd366010.js.map": "/DBDMaps/static/js/main.cd366010.js.map",
     "787.be8eda9f.chunk.js.map": "/DBDMaps/static/js/787.be8eda9f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.97c054e4.css",
-    "static/js/main.6c4415bd.js"
+    "static/js/main.cd366010.js"
   ]
 }
