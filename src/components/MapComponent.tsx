@@ -1,29 +1,41 @@
 import React from "react";
 import styled from "styled-components";
-import { Map } from "../types/map";
+import { DBDMap } from "../types/map";
+import TextComponent, { TextVariant } from "./Text";
 type MapStyleProps = {};
-const MapWrapper = styled.div<MapStyleProps>`
+const RealmWrapper = styled.div<MapStyleProps>`
   display: flex;
   flex-direction: column;
-  cursor: pointer;
+  gap: 4px;
   img {
     width: 20vw;
   }
+  .map-entry {
+    cursor: pointer;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 `;
 type MapProps = {
-  map: Map;
-  showMap: (map: Map) => void;
+  maps: DBDMap[];
+  realmName: string;
+  showMap: (map: DBDMap) => void;
 };
-const MapComponent: React.FC<MapProps> = ({ map, showMap }) => {
+const RealmComponent: React.FC<MapProps> = ({ maps, realmName, showMap }) => {
   return (
-    <MapWrapper onClick={() => showMap(map)}>
-      <div>
-        <div>{map.realm}</div>
-        {map.names.map((mapName) => (
-          <div>{mapName}</div>
-        ))}
-      </div>
-    </MapWrapper>
+    <RealmWrapper>
+      <TextComponent variant={TextVariant.HEADER}>{realmName}</TextComponent>
+      {maps.map((map) => (
+        <div
+          className={"map-entry"}
+          key={map.names[0]}
+          onClick={() => showMap(map)}
+        >
+          {map.names[0]}
+        </div>
+      ))}
+    </RealmWrapper>
   );
 };
-export default MapComponent;
+export default RealmComponent;

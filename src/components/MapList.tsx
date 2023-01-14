@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styled, { css } from "styled-components";
-import MapComponent from "./MapComponent";
-import { Map } from "../types/map";
+import RealmComponent from "./MapComponent";
+import { DBDMap } from "../types/map";
 import PortalWrapper from "./PortalWrapper";
 import DynamicImage from "./DynamicImage";
 
@@ -56,14 +56,20 @@ const ShownMapModal = styled.div`
 `;
 
 type MapListProps = {
-  maps: Map[];
+  mapsByRealm: Map<string, DBDMap[]>;
 };
-const MapList: React.FC<MapListProps> = ({ maps }) => {
-  const [shownMap, setShownMap] = useState<Map>();
+const MapList: React.FC<MapListProps> = ({ mapsByRealm }) => {
+  const [shownMap, setShownMap] = useState<DBDMap>();
+  const realms = Array.from(mapsByRealm.keys());
   return (
     <MapListWrapper>
-      {maps.map((map) => (
-        <MapComponent map={map} showMap={(map) => setShownMap(map)} />
+      {realms.map((realm) => (
+        <RealmComponent
+          key={realm}
+          realmName={realm}
+          maps={mapsByRealm.get(realm) || []}
+          showMap={(map) => setShownMap(map)}
+        />
       ))}
       {shownMap && (
         <PortalWrapper>
