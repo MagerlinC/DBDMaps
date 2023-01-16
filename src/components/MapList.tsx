@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import styled, { css } from "styled-components";
 import RealmComponent from "./MapComponent";
 import { DBDMap } from "../types/map";

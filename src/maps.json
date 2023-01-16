@@ -187,6 +187,16 @@
         "Lerys Memorial Institute: Treatment Theatre"
       ],
       "image": "Other/Lerys.png"
+    },
+    {
+      "realm": "Raccoon City",
+      "names": ["Raccoon City Police Station West Wing", "RPD West Wing"],
+      "image": "Other/rpd-west.png"
+    },
+    {
+      "realm": "Raccoon City",
+      "names": ["Raccoon City Police Station East Wing", "RPD East Wing"],
+      "image": "Other/rpd-east.png"
     }
   ]
 }
