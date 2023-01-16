@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/DBDMaps/static/css/main.97c054e4.css",
-    "main.js": "/DBDMaps/static/js/main.cd366010.js",
+    "main.js": "/DBDMaps/static/js/main.5c478133.js",
     "static/js/814.807218f3.chunk.js": "/DBDMaps/static/js/814.807218f3.chunk.js",
     "static/js/114.d88d4fb9.chunk.js": "/DBDMaps/static/js/114.d88d4fb9.chunk.js",
     "static/js/265.02fb20cf.chunk.js": "/DBDMaps/static/js/265.02fb20cf.chunk.js",
@@ -35,6 +35,8 @@
     "static/js/770.f3493750.chunk.js": "/DBDMaps/static/js/770.f3493750.chunk.js",
     "static/js/492.efc0f27e.chunk.js": "/DBDMaps/static/js/492.efc0f27e.chunk.js",
     "static/js/470.4f88b6b7.chunk.js": "/DBDMaps/static/js/470.4f88b6b7.chunk.js",
+    "static/js/117.b888e752.chunk.js": "/DBDMaps/static/js/117.b888e752.chunk.js",
+    "static/js/435.daa0f67d.chunk.js": "/DBDMaps/static/js/435.daa0f67d.chunk.js",
     "static/js/488.74971c45.chunk.js": "/DBDMaps/static/js/488.74971c45.chunk.js",
     "static/js/380.66e4993a.chunk.js": "/DBDMaps/static/js/380.66e4993a.chunk.js",
     "static/js/652.fb05deed.chunk.js": "/DBDMaps/static/js/652.fb05deed.chunk.js",
@@ -54,7 +56,9 @@
     "static/media/Azarovs Resting Place.png": "/DBDMaps/static/media/Azarovs Resting Place.6ca865a85cf3763779fb.png",
     "static/media/Pale Rose.png": "/DBDMaps/static/media/Pale Rose.2e9d40abf25b2907922a.png",
     "static/media/Shelter Woods.png": "/DBDMaps/static/media/Shelter Woods.68824fc434f60ca8bd84.png",
+    "static/media/rpd-east.png": "/DBDMaps/static/media/rpd-east.1a2470bcb9a9354e50d4.png",
     "static/media/Haddonfield.png": "/DBDMaps/static/media/Haddonfield.5d2b85e08f91c2ad6290.png",
+    "static/media/rpd-west.png": "/DBDMaps/static/media/rpd-west.2b6c32aecf953bb147f3.png",
     "static/media/Blood Lodge.png": "/DBDMaps/static/media/Blood Lodge.e4992ef5b977f7ae1c55.png",
     "static/media/Groaning Storehouse.png": "/DBDMaps/static/media/Groaning Storehouse.7d27f04af513b4f96d06.png",
     "static/media/Father Campbells Chapel.png": "/DBDMaps/static/media/Father Campbells Chapel.af82d603880f2e7fedac.png",
@@ -83,11 +87,11 @@
     "static/media/Midwitch Top.png": "/DBDMaps/static/media/Midwitch Top.7c877c10a165d8e0296c.png",
     "index.html": "/DBDMaps/index.html",
     "main.97c054e4.css.map": "/DBDMaps/static/css/main.97c054e4.css.map",
-    "main.cd366010.js.map": "/DBDMaps/static/js/main.cd366010.js.map",
+    "main.5c478133.js.map": "/DBDMaps/static/js/main.5c478133.js.map",
     "787.be8eda9f.chunk.js.map": "/DBDMaps/static/js/787.be8eda9f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.97c054e4.css",
-    "static/js/main.cd366010.js"
+    "static/js/main.5c478133.js"
   ]
 }
