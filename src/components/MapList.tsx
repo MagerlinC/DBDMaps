@@ -4,6 +4,7 @@ import RealmComponent from "./MapComponent";
 import { DBDMap } from "../types/map";
 import PortalWrapper from "./PortalWrapper";
 import DynamicImage from "./DynamicImage";
+import TextComponent, { TextVariant } from "./Text";
 
 const MapListWrapper = styled.div`
   ${({ theme }) => css`
@@ -29,17 +30,19 @@ const ShownMapModal = styled.div`
     align-items: center;
     .modal-contents {
       position: relative;
-      top: 40%;
+      top: 50%;
       transform: translateY(-50%);
       z-index: 3;
       display: flex;
       flex-direction: column;
+      gap: 8px;
       align-items: center;
       padding: ${theme.spacing.medium};
+      p {
+        color: #fff;
+      }
       img {
         position: relative;
-        top: 60%;
-        transform: translateY(-50%);
         width: max(40vh, 40vw);
       }
       button {
@@ -96,6 +99,9 @@ const MapList: React.FC<MapListProps> = ({
             />
             <div className={"modal-contents"}>
               <DynamicImage fileName={shownMap.image} alt={shownMap.image} />
+              <TextComponent variant={TextVariant.BODY}>
+                This modal can be closed by hitting escape
+              </TextComponent>
             </div>
           </ShownMapModal>
         </PortalWrapper>

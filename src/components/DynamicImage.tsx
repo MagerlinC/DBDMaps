@@ -1,9 +1,6 @@
 import React from "react";
-import styled from "styled-components";
 import TextComponent, { TextVariant } from "./Text";
 import useImage from "./UseImage";
-type DynamicImageStyleProps = {};
-const DynamicImageWrapper = styled.div<DynamicImageStyleProps>``;
 type DynamicImageProps = {
   fileName: string;
   alt: string;

@@ -124,7 +124,7 @@ function App() {
             value={searchString}
             onKeyDown={handleInputKeydown}
             onChange={(e) => setSearchString(e.target.value)}
-            placeholder="search..."
+            placeholder="search here - press enter to select first result"
           />
         </header>
         <MapList
