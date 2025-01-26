@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdbd_maps=self.webpackChunkdbd_maps||[]).push([[4544],{4544:function(e,s,a){e.exports=a.p+"static/media/Forgotten Ruins.754351a6cad6e8b37661.webp"}}]);

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdbd_maps=self.webpackChunkdbd_maps||[]).push([[6953],{6953:function(e,s,b){e.exports=b.p+"static/media/Torment Creek.291b2f5c3fdb4e1b5e1d.webp"}}]);

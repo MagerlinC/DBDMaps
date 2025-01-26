@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdbd_maps=self.webpackChunkdbd_maps||[]).push([[8456],{8456:function(e,a,s){e.exports=s.p+"static/media/Sanctum of Wrath.7ed33a70c41feb8f0857.webp"}}]);

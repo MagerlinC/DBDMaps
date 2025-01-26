@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkdbd_maps=self.webpackChunkdbd_maps||[]).push([[839],{5839:function(e,s,a){e.exports=a.p+"static/media/Ormond.a3d881a360d5e4f6f02e.png"}}]);
