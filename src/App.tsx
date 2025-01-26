@@ -54,7 +54,6 @@ const ApplicationWrapper = styled.div`
 function App() {
   const [searchString, setSearchString] = useState<string>("");
   const [shownMap, setShownMap] = useState<DBDMap>();
-  const [availableMaps, setAvailableMaps] = useState<DBDMap[]>([]);
   const maps = MapJSON.maps;
   const mapsByRealm = new Map<string, DBDMap[]>();
 
