@@ -54,6 +54,7 @@ const ApplicationWrapper = styled.div`
 function App() {
   const [searchString, setSearchString] = useState<string>("");
   const [shownMap, setShownMap] = useState<DBDMap>();
+  const [availableMaps, setAvailableMaps] = useState<DBDMap[]>([]);
   const maps = MapJSON.maps;
   const mapsByRealm = new Map<string, DBDMap[]>();
 
@@ -117,7 +118,7 @@ function App() {
             Dead by Daylight Callout Maps
           </TextComponent>
           <TextComponent className={"reference"} variant={TextVariant.BODY}>
-            Maps by <a href="https://www.youtube.com/@hens333">Hens33</a>
+            Maps by <a href="https://www.youtube.com/@hens333">Hens333</a>
           </TextComponent>
           <input
             autoFocus

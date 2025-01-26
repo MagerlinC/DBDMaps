@@ -1,202 +1,259 @@
 {
   "maps": [
     {
-      "realm": "Autohaven Wreckers",
+      "realm": "Azarov's",
       "names": ["Azarov's Resting Place"],
-      "image": "Azarovs/Azarovs Resting Place.png"
+      "image": "Azarovs/Azarovs Resting Place.webp"
     },
     {
-      "realm": "Autohaven Wreckers",
+      "realm": "Azarov's",
       "names": ["Blood Lodge"],
-      "image": "Azarovs/Blood Lodge.png"
+      "image": "Azarovs/Blood Lodge.webp"
     },
     {
-      "realm": "Autohaven Wreckers",
+      "realm": "Azarov's",
       "names": ["Gas Heaven"],
-      "image": "Azarovs/Gas Heaven.png"
+      "image": "Azarovs/Gas Heaven.webp"
     },
     {
-      "realm": "Autohaven Wreckers",
+      "realm": "Azarov's",
       "names": ["Wreckers' Yard", "Wreckers Yard"],
-      "image": "Azarovs/Wreckers.png"
+      "image": "Azarovs/Wreckers.webp"
     },
     {
-      "realm": "Autohaven Wreckers",
+      "realm": "Azarov's",
       "names": ["Wretched Shop"],
-      "image": "Azarovs/Wretched Shop.png"
+      "image": "Azarovs/Wretched Shop.webp"
     },
     {
       "realm": "Badham",
       "names": ["Preschool I", "Preschool 1"],
-      "image": "Badham/Preschool1.png"
+      "image": "Badham/Preschool1.webp"
     },
     {
       "realm": "Badham",
       "names": ["Preschool II", "Preschool 2"],
-      "image": "Badham/Preschool2.png"
+      "image": "Badham/Preschool2.webp"
     },
     {
       "realm": "Badham",
       "names": ["Preschool III", "Preschool 3"],
-      "image": "Badham/Preschool3.png"
+      "image": "Badham/Preschool3.webp"
     },
     {
       "realm": "Badham",
       "names": ["Preschool IIIV", "Preschool 4"],
-      "image": "Badham/Preschool4.png"
+      "image": "Badham/Preschool4.webp"
     },
     {
       "realm": "Badham",
       "names": ["Preschool V", "Preschool 5"],
-      "image": "Badham/Preschool5.png"
+      "image": "Badham/Preschool5.webp"
+    },
+    {
+      "realm": "Borgo",
+      "names": ["Forgotten Ruins"],
+      "image": "Borgo/Forgotten Ruins.webp"
+    },
+    {
+      "realm": "Borgo",
+      "names": ["Shattered Square"],
+      "image": "Borgo/Shattered Square.webp"
     },
     {
       "realm": "Coldwind Farm",
       "names": ["Fractured Cowshed"],
-      "image": "Coldwind/Fractured Cowshed.png"
+      "image": "Coldwind/Fractured Cowshed.webp"
     },
     {
       "realm": "Coldwind Farm",
       "names": ["Rancid Abbatoir"],
-      "image": "Coldwind/Rancid Abbatoir.png"
+      "image": "Coldwind/Rancid Abbatoir.webp"
     },
     {
       "realm": "Coldwind Farm",
       "names": ["Rotten Fields"],
-      "image": "Coldwind/Rotten Fields.png"
+      "image": "Coldwind/Rotten Fields.webp"
     },
     {
       "realm": "Coldwind Farm",
       "names": ["The Thompson House"],
-      "image": "Coldwind/The Thompson House.png"
+      "image": "Coldwind/The Thompson House.webp"
     },
     {
       "realm": "Coldwind Farm",
       "names": ["Torment Creek"],
-      "image": "Coldwind/Torment Creek.png"
+      "image": "Coldwind/Torment Creek.webp"
     },
     {
       "realm": "Crotus Prenn Asylum",
       "names": ["Disturbed Ward"],
-      "image": "Crotus Pen/Disturbed Ward.png"
+      "image": "Crotus Pen/Disturbed Ward.webp"
     },
     {
       "realm": "Crotus Prenn Asylum",
       "names": ["Father Campbells Chapel"],
-      "image": "Crotus Pen/Father Campbells Chapel.png"
+      "image": "Crotus Pen/Father Campbells Chapel.webp"
+    },
+    {
+      "realm": "Dvarka Deepwood",
+      "names": ["Nostromo Wreckage"],
+      "image": "Dvarka Deepwood/Nostromo Wreckage.webp"
+    },
+    {
+      "realm": "Dvarka Deepwood",
+      "names": ["Toba Landing"],
+      "image": "Dvarka Deepwood/Toba Landing.webp"
     },
     {
       "realm": "MacMillan Estate",
       "names": ["Coal Tower"],
-      "image": "McMillan/Coal Tower.png"
+      "image": "McMillan/Coal Tower.webp"
+    },
+    {
+      "realm": "MacMillan Estate",
+      "names": ["Coal Tower II", "Coal Tower 2"],
+      "image": "McMillan/Coal Tower II.webp"
     },
     {
       "realm": "MacMillan Estate",
       "names": ["Groaning Storehouse"],
-      "image": "McMillan/Groaning Storehouse.png"
+      "image": "McMillan/Groaning Storehouse.webp"
+    },
+    {
+      "realm": "MacMillan Estate",
+      "names": ["Groaning Storehouse II", "Groaning Storehouse 2"],
+      "image": "McMillan/Groaning Storehouse II.webp"
     },
     {
       "realm": "MacMillan Estate",
       "names": ["Ironworks Of Misery"],
-      "image": "McMillan/Ironworks Of Misery.png"
+      "image": "McMillan/Ironworks Of Misery.webp"
+    },
+    {
+      "realm": "MacMillan Estate",
+      "names": ["Ironworks Of Misery II", "Ironworks Of Misery 2"],
+      "image": "McMillan/Ironworks Of Misery II.webp"
     },
     {
       "realm": "MacMillan Estate",
       "names": ["Shelter Woods"],
-      "image": "McMillan/Shelter Woods.png"
+      "image": "McMillan/Shelter Woods.webp"
+    },
+    {
+      "realm": "MacMillan Estate",
+      "names": ["Shelter Woods II", "Shelter Woods 2"],
+      "image": "McMillan/Shelter Woods II.webp"
     },
     {
       "realm": "MacMillan Estate",
       "names": ["Suffocation Pit"],
-      "image": "McMillan/Suffocation Pit.png"
+      "image": "McMillan/Suffocation Pit.webp"
     },
     {
-      "realm": "Red Forest",
-      "names": ["Mother's Dwelling", "Mothers Dwelling"],
-      "image": "Red Forest/Mothers Dwelling.png"
-    },
-    {
-      "realm": "Red Forest",
-      "names": ["Temple Of Purgation"],
-      "image": "Red Forest/Temple of Purgation.png"
-    },
-    {
-      "realm": "Backwater Swamp",
-      "names": ["Grim Pantry"],
-      "image": "Swamp/Grim Pantry.png"
-    },
-    {
-      "realm": "Backwater Swamp",
-      "names": ["The Pale Rose"],
-      "image": "Swamp/Pale Rose.png"
-    },
-    {
-      "realm": "Yamaoka Estate",
-      "names": ["Family Residence"],
-      "image": "Yamaoka/Family Residence.png"
-    },
-    {
-      "realm": "Yamaoka Estate",
-      "names": ["Sanctum Of Wrath"],
-      "image": "Yamaoka/Sanctum of Wrath.png"
-    },
-    {
-      "realm": "Forsaken Boneyard",
-      "names": ["Eyrie of Crows"],
-      "image": "Other/Eyrie of Crows.png"
-    },
-    {
-      "realm": "Grave of Glennvale",
-      "names": ["Dead Dawg Saloon"],
-      "image": "Other/Dead Dawg Saloon.png"
-    },
-    {
-      "realm": "Withered Isle",
-      "names": ["Garden of Joy"],
-      "image": "Other/Garden of Joy.png"
-    },
-    {
-      "realm": "Gidean Meat Plant",
-      "names": ["The Game"],
-      "image": "Other/The Game.png"
-    },
-    {
-      "realm": "Haddonfield",
-      "names": ["Lampkin Lane"],
-      "image": "Other/Haddonfield.png"
-    },
-    {
-      "realm": "Silent Hill",
-      "names": ["Midwich Elementary School"],
-      "image": "Other/midwich-map.gif"
+      "realm": "MacMillan Estate",
+      "names": ["Suffocation Pit II", "Suffocation Pit 2"],
+      "image": "McMillan/Suffocation Pit II.webp"
     },
     {
       "realm": "Ormond",
-      "names": ["Mount Ormond Resort"],
-      "image": "Other/Ormond.png"
+      "names": ["Ormond I", "Ormond 1"],
+      "image": "Ormond/Ormond.webp"
     },
     {
-      "realm": "Shattered Square",
-      "names": ["Shattered Square"],
-      "image": "Other/Shattered Square.png"
+      "realm": "Ormond",
+      "names": ["Ormond II", "Ormond 2"],
+      "image": "Ormond/Ormond II.webp"
     },
     {
-      "realm": "Léry's Memorial Institute",
-      "names": [
-        "Treatment Theatre",
-        "Lerys Memorial Institute: Treatment Theatre"
-      ],
-      "image": "Other/Lerys.png"
+      "realm": "Ormond",
+      "names": ["Ormond III", "Ormond 3"],
+      "image": "Ormond/Ormond III.webp"
+    },
+    {
+      "realm": "Other",
+      "names": ["Dead Dawg Saloon"],
+      "image": "Other/Dead Dawg Saloon.webp"
+    },
+    {
+      "realm": "Other",
+      "names": ["Eyrie of Crows"],
+      "image": "Other/Eyrie of Crows.webp"
+    },
+    {
+      "realm": "Other",
+      "names": ["Garden of Joy"],
+      "image": "Other/Garden of Joy.webp"
+    },
+    {
+      "realm": "Other",
+      "names": ["The Game"],
+      "image": "Other/The Game.webp"
+    },
+    {
+      "realm": "Other",
+      "names": ["Haddonfield", "Lampkin Lane"],
+      "image": "Other/Haddonfield.webp"
+    },
+    {
+      "realm": "Other",
+      "names": ["Midwich Elementary School"],
+      "image": "Other/Midwich.gif"
+    },
+    {
+      "realm": "Other",
+      "names": ["Lery's", "Lerys Memorial Institute: Treatment Theatre"],
+      "image": "Other/Lerys.webp"
     },
     {
       "realm": "Raccoon City",
       "names": ["Raccoon City Police Station West Wing", "RPD West Wing"],
-      "image": "Other/rpd-west.png"
+      "image": "Other/Rpd West Wing.webp"
     },
     {
       "realm": "Raccoon City",
       "names": ["Raccoon City Police Station East Wing", "RPD East Wing"],
-      "image": "Other/rpd-east.png"
+      "image": "Other/Rpd East Wing.webp"
+    },
+    {
+      "realm": "Red Forest",
+      "names": ["Mother's Dwelling", "Mothers Dwelling"],
+      "image": "Red Forest/Mothers Dwelling.webp"
+    },
+    {
+      "realm": "Red Forest",
+      "names": ["Temple Of Purgation"],
+      "image": "Red Forest/Temple of Purgation.webp"
+    },
+    {
+      "realm": "Backwater Swamp",
+      "names": ["Grim Pantry"],
+      "image": "Swamp/Grim Pantry.webp"
+    },
+    {
+      "realm": "Backwater Swamp",
+      "names": ["The Pale Rose"],
+      "image": "Swamp/Pale Rose.webp"
+    },
+    {
+      "realm": "Yamaoka Estate",
+      "names": ["Family Residence"],
+      "image": "Yamaoka/Family Residence.webp"
+    },
+    {
+      "realm": "Yamaoka Estate",
+      "names": ["Family Residence II", "Family Residence 2"],
+      "image": "Yamaoka/Family Residence II.webp"
+    },
+    {
+      "realm": "Yamaoka Estate",
+      "names": ["Sanctum Of Wrath"],
+      "image": "Yamaoka/Sanctum of Wrath.webp"
+    },
+    {
+      "realm": "Yamaoka Estate",
+      "names": ["Sanctum Of Wrath II", "Sanctum Of Wrath 2"],
+      "image": "Yamaoka/Sanctum of Wrath II.webp"
     }
   ]
 }
