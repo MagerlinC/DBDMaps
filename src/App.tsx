@@ -88,12 +88,23 @@ function App() {
     }
   };
 
+  const searchMatch = (mapName: string, searchString: string) => {
+    if (searchString.includes(" ")) {
+      const searchWords = searchString.split(" ");
+      const mapNameParts = mapName.split(" ");
+      return searchWords.every((word) =>
+        mapNameParts.some((part) =>
+          part.toLowerCase().includes(word.toLowerCase())
+        )
+      );
+    }
+    return mapName.toLowerCase().includes(searchString.toLowerCase());
+  };
+
   const isMatch = (map: DBDMap, searchString: string) => {
-    const realmMatch = map.realm
-      .toLowerCase()
-      .includes(searchString.toLowerCase());
+    const realmMatch = searchMatch(map.realm, searchString);
     const mapNameMatch = map.names.some((mapName) =>
-      mapName.toLowerCase().includes(searchString.toLowerCase())
+      searchMatch(mapName, searchString)
     );
     return realmMatch || mapNameMatch;
   };
