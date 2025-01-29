@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/DBDMaps/static/css/main.aa5b7962.css",
-    "main.js": "/DBDMaps/static/js/main.363c488a.js",
+    "main.js": "/DBDMaps/static/js/main.2b2ebe1e.js",
     "static/js/2978.5cc1db1b.chunk.js": "/DBDMaps/static/js/2978.5cc1db1b.chunk.js",
     "static/js/6304.70a8ae91.chunk.js": "/DBDMaps/static/js/6304.70a8ae91.chunk.js",
     "static/js/1530.89399601.chunk.js": "/DBDMaps/static/js/1530.89399601.chunk.js",
@@ -113,11 +113,11 @@
     "static/media/Blood Lodge.webp": "/DBDMaps/static/media/Blood Lodge.f31f4ee9edc612a67a99.webp",
     "index.html": "/DBDMaps/index.html",
     "main.aa5b7962.css.map": "/DBDMaps/static/css/main.aa5b7962.css.map",
-    "main.363c488a.js.map": "/DBDMaps/static/js/main.363c488a.js.map",
+    "main.2b2ebe1e.js.map": "/DBDMaps/static/js/main.2b2ebe1e.js.map",
     "787.be8eda9f.chunk.js.map": "/DBDMaps/static/js/787.be8eda9f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.aa5b7962.css",
-    "static/js/main.363c488a.js"
+    "static/js/main.2b2ebe1e.js"
   ]
 }
