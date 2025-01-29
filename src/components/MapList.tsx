@@ -13,7 +13,7 @@ const MapListWrapper = styled.div`
     max-height: 100%;
     overflow-y: scroll;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(550px, 1fr));
     gap: ${theme.spacing.large};
   `}
 `;
