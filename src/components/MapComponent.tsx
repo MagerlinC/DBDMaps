@@ -27,6 +27,15 @@ const MapListWrapper = styled.div`
     display: flex;
     flex-direction: row;
     gap: ${theme.spacing.medium};
+    overflow: hidden;
+    ul {
+      overflow: hidden;
+    }
+    p {
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+    }
     li::marker {
       color: ${theme.colors.secondary};
     }
@@ -49,6 +58,7 @@ const RealmComponent: React.FC<MapProps> = ({ maps, realmName, showMap }) => {
             <li
               className={"map-entry"}
               key={map.names[0]}
+              title={map.names[0]}
               onClick={() => showMap(map)}
             >
               <TextComponent variant={TextVariant.BODY}>
@@ -62,6 +72,7 @@ const RealmComponent: React.FC<MapProps> = ({ maps, realmName, showMap }) => {
             <li
               className={"map-entry"}
               key={map.names[0]}
+              title={map.names[0]}
               onClick={() => showMap(map)}
             >
               <TextComponent variant={TextVariant.BODY}>
