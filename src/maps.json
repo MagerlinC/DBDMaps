@@ -208,12 +208,12 @@
     {
       "realm": "Raccoon City",
       "names": ["Raccoon City Police Station West Wing", "RPD West Wing"],
-      "image": "Other/Rpd West Wing.webp"
+      "image": "Raccoon City/Rpd West Wing.webp"
     },
     {
       "realm": "Raccoon City",
       "names": ["Raccoon City Police Station East Wing", "RPD East Wing"],
-      "image": "Other/Rpd East Wing.webp"
+      "image": "Raccoon City/Rpd East Wing.webp"
     },
     {
       "realm": "Red Forest",
