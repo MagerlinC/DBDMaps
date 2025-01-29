@@ -9,11 +9,11 @@
 }
 
 .fadeIn {
-  animation: fadeIn 2s;
+  animation: fadeIn 1s;
 }
 
 .fadeInDown {
-  animation: fadeInDown 2s;
+  animation: fadeInDown 1s;
 }
 
 /* Fade Effect */

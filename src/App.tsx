@@ -9,12 +9,38 @@ import TextComponent, { TextVariant } from "./components/Text";
 import React, { useEffect, useState } from "react";
 import MapJSON from "./maps.json";
 import { DBDMap } from "./types/map";
+import DynamicImage from "./components/DynamicImage";
+
+const HeaderContents = styled.div`
+  ${({ theme }) => `
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    gap: ${theme.spacing.xlarge};
+    img {
+      max-width: 125px;
+    } 
+    input {
+      padding: 8px;
+      border-radius: 8px;
+      border: none;
+      flex: 1;
+      background: ${theme.colors.secondary};
+      min-width: 75%;
+      :focus {
+        border: none;
+      }
+    }
+  `}
+`;
 
 const ApplicationWrapper = styled.div`
   ${({ theme }) => `
     display: flex;
     flex-direction: column;
-    gap: ${theme.spacing.small};
+    gap: ${theme.spacing.medium};
     margin: 0;
     padding: 0;
     background-color: ${theme.colors.primary};
@@ -22,14 +48,13 @@ const ApplicationWrapper = styled.div`
     height: 100vh;
     max-height: 100vh;
     overflow: hidden;
-    color: ${theme.colors.textPrimary};
     font-family: ${theme.typography.fontFamilyMono};
     header {
       display: flex;
       flex-direction: column;
       text-align: center;
-      gap: ${theme.spacing.medium};
-      padding: ${theme.spacing.small} ${theme.spacing.large};
+      gap: ${theme.spacing.xlarge};
+      padding: ${theme.spacing.xlarge};
       .reference {
         opacity: 0.8;
         position: absolute;
@@ -37,14 +62,7 @@ const ApplicationWrapper = styled.div`
         right: ${theme.spacing.large};
       }
     }
-    input {
-      padding: 8px;
-      border-radius: 8px;
-      border: none;
-      :focus {
-        border: none;
-      }
-    }
+
     a:visited {
       color: ${theme.colors.secondary};
     }
@@ -59,11 +77,10 @@ function App() {
 
   useEffect(() => {
     window.addEventListener("keydown", closeOnEscape);
-    // Remove event listeners on cleanup
     return () => {
       window.removeEventListener("keydown", closeOnEscape);
     };
-  }, []); // Empty array ensures that effect is only run on mount and unmount
+  }, []);
 
   const handleInputKeydown = (e: React.KeyboardEvent) => {
     switch (e.key) {
@@ -110,7 +127,7 @@ function App() {
   };
 
   maps.forEach((map) => {
-    if (searchString == "" || isMatch(map, searchString)) {
+    if (searchString === "" || isMatch(map, searchString)) {
       const curr = mapsByRealm.get(map.realm);
       if (curr) {
         mapsByRealm.set(map.realm, [...curr, map]);
@@ -124,19 +141,20 @@ function App() {
     <ThemeProvider theme={theme}>
       <ApplicationWrapper>
         <header>
-          <TextComponent variant={TextVariant.PAGEHEADER}>
-            Dead by Daylight Callout Maps
-          </TextComponent>
+          <HeaderContents>
+            <DynamicImage fileName="logo.svg" alt="logo" />
+
+            <input
+              autoFocus
+              value={searchString}
+              onKeyDown={handleInputKeydown}
+              onChange={(e) => setSearchString(e.target.value)}
+              placeholder="search here - press enter to select first result"
+            />
+          </HeaderContents>
           <TextComponent className={"reference"} variant={TextVariant.BODY}>
             Maps by <a href="https://www.youtube.com/@hens333">Hens333</a>
           </TextComponent>
-          <input
-            autoFocus
-            value={searchString}
-            onKeyDown={handleInputKeydown}
-            onChange={(e) => setSearchString(e.target.value)}
-            placeholder="search here - press enter to select first result"
-          />
         </header>
         <MapList
           mapsByRealm={mapsByRealm}

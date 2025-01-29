@@ -2,10 +2,10 @@ import React from "react";
 import styled, { css } from "styled-components";
 import { DBDMap } from "../types/map";
 import TextComponent, { TextVariant } from "./Text";
-type MapStyleProps = {};
-const RealmWrapper = styled.div<MapStyleProps>`
+
+const RealmWrapper = styled.div`
   ${({ theme }) => css`
-    padding: 8px;
+    padding: ${theme.spacing.large};
     border: 1px solid ${theme.colors.tertiary};
     border-radius: ${theme.borderRadius.medium};
     box-shadow: ${theme.boxshadows.medium};
@@ -27,6 +27,9 @@ const MapListWrapper = styled.div`
     display: flex;
     flex-direction: row;
     gap: ${theme.spacing.medium};
+    li::marker {
+      color: ${theme.colors.secondary};
+    }
   `}
 `;
 
@@ -48,7 +51,9 @@ const RealmComponent: React.FC<MapProps> = ({ maps, realmName, showMap }) => {
               key={map.names[0]}
               onClick={() => showMap(map)}
             >
-              {map.names[0]}
+              <TextComponent variant={TextVariant.BODY}>
+                {map.names[0]}
+              </TextComponent>
             </li>
           ))}
         </ul>
@@ -59,7 +64,9 @@ const RealmComponent: React.FC<MapProps> = ({ maps, realmName, showMap }) => {
               key={map.names[0]}
               onClick={() => showMap(map)}
             >
-              {map.names[0]}
+              <TextComponent variant={TextVariant.BODY}>
+                {map.names[0]}
+              </TextComponent>
             </li>
           ))}
         </ul>

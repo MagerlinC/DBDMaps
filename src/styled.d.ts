@@ -4,6 +4,7 @@ declare module "styled-components" {
   type Typography = {
     fontWeight: string;
     fontSize: string;
+    color: string;
   };
   export interface DefaultTheme {
     colors: {
@@ -14,9 +15,6 @@ declare module "styled-components" {
       gradient: string;
       gradientAccent: string;
       gradientAccentRotated: string;
-      textPrimary: string;
-      textSecondary: string;
-      textTertiary: string;
     };
     borderRadius: {
       small: string;

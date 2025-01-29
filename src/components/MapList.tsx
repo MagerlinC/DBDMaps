@@ -8,12 +8,13 @@ import TextComponent, { TextVariant } from "./Text";
 
 const MapListWrapper = styled.div`
   ${({ theme }) => css`
-    padding: 8px ${theme.spacing.large};
+    padding: 0 ${theme.spacing.xlarge};
+    padding-bottom: ${theme.spacing.medium};
     max-height: 100%;
     overflow-y: scroll;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: ${theme.spacing.medium};
+    gap: ${theme.spacing.large};
   `}
 `;
 
@@ -38,9 +39,6 @@ const ShownMapModal = styled.div`
       gap: 8px;
       align-items: center;
       padding: ${theme.spacing.medium};
-      p {
-        color: #fff;
-      }
       img {
         position: relative;
         width: max(40vh, 40vw);
@@ -81,7 +79,7 @@ const MapList: React.FC<MapListProps> = ({
   const realms = Array.from(mapsByRealm.keys()).sort();
 
   return (
-    <MapListWrapper>
+    <MapListWrapper className="fadeInDown">
       {realms.map((realm) => (
         <RealmComponent
           key={realm}
