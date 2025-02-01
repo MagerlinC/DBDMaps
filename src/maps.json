@@ -192,6 +192,11 @@
     },
     {
       "realm": "Other",
+      "names": ["Hawkins", "Hawkins National Laboratory"],
+      "image": "Other/Hawkins.webp"
+    },
+    {
+      "realm": "Other",
       "names": ["Haddonfield", "Lampkin Lane"],
       "image": "Other/Haddonfield.webp"
     },
